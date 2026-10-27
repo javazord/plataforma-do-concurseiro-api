@@ -1,6 +1,8 @@
 package br.com.plataforma_do_concurseiro.planejamento.concursos.entity;
 
 import br.com.plataforma_do_concurseiro.planejamento.concursos.e.EStatusConcurso;
+import br.com.plataforma_do_concurseiro.planejamento.disciplinas.Disciplina;
+import br.com.plataforma_do_concurseiro.planejamento.planos.estudo.entity.PlanoEstudo;
 import br.com.plataforma_do_concurseiro.planejamento.usuario.entity.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,11 +10,11 @@ import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "concursos")

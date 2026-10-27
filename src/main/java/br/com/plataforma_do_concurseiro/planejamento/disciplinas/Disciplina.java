@@ -1,17 +1,18 @@
 package br.com.plataforma_do_concurseiro.planejamento.disciplinas;
 
 import br.com.plataforma_do_concurseiro.planejamento.concursos.entity.Concurso;
+import br.com.plataforma_do_concurseiro.planejamento.topicos.entity.Topico;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "disciplinas")

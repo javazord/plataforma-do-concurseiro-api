@@ -1,6 +1,7 @@
 package br.com.plataforma_do_concurseiro.planejamento.tarefas.estudo.entity;
 
 import br.com.plataforma_do_concurseiro.planejamento.planos.estudo.entity.PlanoEstudo;
+import br.com.plataforma_do_concurseiro.planejamento.sessoes.estudo.entity.SessaoEstudo;
 import br.com.plataforma_do_concurseiro.planejamento.tarefas.estudo.e.EStatusTarefa;
 import br.com.plataforma_do_concurseiro.planejamento.tarefas.estudo.e.ETipoTarefa;
 import br.com.plataforma_do_concurseiro.planejamento.topicos.entity.Topico;
@@ -12,11 +13,11 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tarefas_estudo")

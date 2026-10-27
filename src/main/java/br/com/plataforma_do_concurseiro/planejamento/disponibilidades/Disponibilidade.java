@@ -1,5 +1,6 @@
 package br.com.plataforma_do_concurseiro.planejamento.disponibilidades;
 
+import br.com.plataforma_do_concurseiro.planejamento.planos.estudo.entity.PlanoEstudo;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,7 +9,6 @@ import java.time.LocalTime;
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "disponibilidades")

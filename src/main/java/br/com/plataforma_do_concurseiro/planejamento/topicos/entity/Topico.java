@@ -1,6 +1,8 @@
 package br.com.plataforma_do_concurseiro.planejamento.topicos.entity;
 
 import br.com.plataforma_do_concurseiro.planejamento.disciplinas.Disciplina;
+import br.com.plataforma_do_concurseiro.planejamento.revisoes.entity.Revisao;
+import br.com.plataforma_do_concurseiro.planejamento.tarefas.estudo.entity.TarefaEstudo;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,7 +14,6 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "topicos")

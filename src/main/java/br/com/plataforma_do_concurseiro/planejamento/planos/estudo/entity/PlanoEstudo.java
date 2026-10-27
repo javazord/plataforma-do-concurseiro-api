@@ -1,17 +1,20 @@
 package br.com.plataforma_do_concurseiro.planejamento.planos.estudo.entity;
 
 import br.com.plataforma_do_concurseiro.planejamento.concursos.entity.Concurso;
+import br.com.plataforma_do_concurseiro.planejamento.disponibilidades.Disponibilidade;
+import br.com.plataforma_do_concurseiro.planejamento.tarefas.estudo.entity.TarefaEstudo;
 import br.com.plataforma_do_concurseiro.planejamento.usuario.entity.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "planos_estudo")
