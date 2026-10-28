@@ -30,12 +30,6 @@ public class PreferenciasUsuario implements Serializable {
     @Column(nullable = false)
     private ETema tema = ETema.SISTEMA;
 
-    @Column(name = "tamanho_fonte", nullable = false)
-    private String tamanhoFonte = "MEDIO";
-
-    private boolean interfaceCompacta;
-    private boolean reduzirAnimacoes;
-
     @Column(nullable = false)
     private int duracaoFocoMinutos = 25;
 

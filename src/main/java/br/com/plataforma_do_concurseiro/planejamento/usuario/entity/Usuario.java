@@ -33,7 +33,7 @@ public class Usuario implements Serializable {
     private String email;
 
     @Column(name = "senha_hash", nullable = false)
-    private String senhaHash;
+    private String senha;
 
     private boolean ativo = true;
 
