@@ -2,6 +2,7 @@ package br.com.plataforma_do_concurseiro.planejamento.usuario.repository;
 
 import br.com.plataforma_do_concurseiro.planejamento.usuario.entity.Usuario;
 import jakarta.persistence.EntityManager;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
@@ -30,6 +31,36 @@ class UsuarioRepositoryTest {
         this.criarUsuario();
         boolean existe = usuarioRepository.existsByEmail(email);
         assertTrue(existe);
+    }
+
+    @Test
+    void existsByEmail_DeveRetornarFalse_QuandoEmailNaoExistir() {
+        String email = "inexistente@email.com";
+        this.criarUsuario();
+        boolean existe = usuarioRepository.existsByEmail(email);
+        assertFalse(existe);
+    }
+
+    @Test
+    void findByEmail_DeveRetornarUsuario_QuandoEmailExistir(){
+        Usuario user = criarUsuario();
+        Optional<Usuario> resultado = usuarioRepository.findByEmail("email@email.com");
+
+        assertTrue(resultado.isPresent());
+
+        Usuario usuarioEncontrado = resultado.orElseThrow();
+
+        assertEquals(user.getId(), usuarioEncontrado.getId());
+        assertEquals("fulano", usuarioEncontrado.getNome());
+        assertEquals("email@email.com", usuarioEncontrado.getEmail());
+        assertTrue(usuarioEncontrado.isAtivo());
+    }
+
+    @Test
+    void findByEmail_DeveRetornarOptionalVazio_QuandoEmailNaoExistir(){
+        Optional<Usuario> resultado = usuarioRepository.findByEmail("inexistente@email.com");
+
+        assertTrue(resultado.isEmpty());
     }
 
     private Usuario criarUsuario(){
